@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mood Checker</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 600px; margin: auto; }
+    textarea { width: 100%; height: 100px; }
+    button { margin-top: 10px; padding: 10px; }
+    #response { margin-top: 20px; background: #f2f2f2; padding: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h2>How are you feeling today?</h2>
+  <textarea id="userInput" placeholder="Type your thoughts here..."></textarea>
+  <br />
+  <button onclick="analyzeMood()">Analyze</button>
+  <div id="response"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
