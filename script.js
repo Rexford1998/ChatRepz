@@ -14,6 +14,9 @@ async function analyzeMood() {
   try {
     const res = await fetch("/.netlify/functions/chatgpt", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({ prompt })
     });
 
@@ -26,7 +29,7 @@ async function analyzeMood() {
 
     responseDiv.innerHTML = data.reply;
   } catch (err) {
-    console.error(err);
-    responseDiv.innerHTML = "Something went wrong. Check the console for details.";
+    console.error("Fetch failed:", err);
+    responseDiv.innerHTML = "Something went wrong. Please try again later.";
   }
 }
