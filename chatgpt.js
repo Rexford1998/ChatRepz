@@ -7,8 +7,8 @@ exports.handler = async function(event) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": "Bearer YOUR_SECRET_KEY_HERE"
-    },
+     "Authorization": "Bearer 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"
+ },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
       messages: [
