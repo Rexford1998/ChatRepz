@@ -17,7 +17,7 @@ async function analyzeMood() {
       headers: {
         "Content-Type": "application/json",
         "Authorization": "Bearer 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"
-      },
+ },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: [
@@ -29,9 +29,23 @@ async function analyzeMood() {
     });
 
     const data = await res.json();
+    console.log(data); // 👈 Check for error info
+
+    if (data.error) {
+      responseDiv.innerHTML = `API Error: ${data.error.message}`;
+      return;
+    }
+
+    if (!data.choices || !data.choices[0]) {
+      responseDiv.innerHTML = "No response from the AI.";
+      return;
+    }
+
     responseDiv.innerHTML = data.choices[0].message.content;
   } catch (err) {
     console.error(err);
-    responseDiv.innerHTML = "Something went wrong. Please try again later.";
+    responseDiv.innerHTML = "Something went wrong. Check the console for details.";
   }
 }
+
+       
