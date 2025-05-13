@@ -7,7 +7,7 @@ exports.handler = async function(event) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-     "Authorization": "Bearer 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"
+     "Authorization": "Bearer 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"
  },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
