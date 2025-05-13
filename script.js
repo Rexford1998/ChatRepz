@@ -16,10 +16,10 @@ async function analyzeMood() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "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"
+        "Authorization": "Bearer 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"
  },
       body: JSON.stringify({
-        model: "gpt-4.1-2025-04-14",
+        model: "gpt-3.5-turbo",
         messages: [
           { role: "system", content: "You are a compassionate mental wellness assistant." },
           { role: "user", content: prompt }
