@@ -16,7 +16,7 @@ async function analyzeMood() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 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”
+        "Authorization": "Bearer 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"
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
